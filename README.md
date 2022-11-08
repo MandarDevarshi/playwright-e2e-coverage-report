@@ -20,11 +20,11 @@ In your `CI` pipeline eg. github actions, add a step after the playwright test r
 
 > Place **after** the step that generates playwright e2e test report.    
 
-```yaml
-- name: Convert E2E Report to Coverage Report
-	run : |
-		npm install playwright-e2e-report
-		node ./tests/reportConvertor.js
+```yml
+	- name: Convert E2E Report to Coverage Report
+		run : |
+			npm install playwright-e2e-report
+			node ./tests/reportConvertor.js
 ```
 
 The playwright report (**`e2eresults.json`**) is currently read from project root and needs to be found there and the second command in this step's run has to have an entrypoint script from [step 2](#step-2), more control with environment variable in next patch.
