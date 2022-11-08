@@ -8,7 +8,11 @@ Therefore, this package tries to fill the gap in a hacky way. Use it in a `CI` p
 
 > **NOTE**: Only supports playwright json reporter 
 
+---
+
 ## Usage
+
+Follow the steps below to integrate it in your test pipeline.
 
 ### Step 1
 
