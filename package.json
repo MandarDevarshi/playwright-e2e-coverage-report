@@ -19,10 +19,10 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MandarDevarshi/playwright-e2e-report.git"
+    "url": "git+https://github.com/MandarDevarshi/playwright-e2e-coverage-report.git"
   },
   "bugs": {
-    "url": "https://github.com/MandarDevarshi/playwright-e2e-report/issues"
+    "url": "https://github.com/MandarDevarshi/playwright-e2e-coverage-report/issues"
   },
-  "homepage": "https://github.com/MandarDevarshi/playwright-e2e-report#README.md"
+  "homepage": "https://github.com/MandarDevarshi/playwright-e2e-coverage-report#README.md"
 }
