@@ -1,6 +1,6 @@
 {
   "name": "playwright-e2e-coverage-report",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Converts playwright e2e test report(json) to a hacky coverage report for use in code coverage",
   "main": "lib/index.js",
   "keywords": [
