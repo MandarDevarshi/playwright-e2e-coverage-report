@@ -20,9 +20,9 @@ In your `CI` pipeline eg. github actions, add a step after the playwright test r
 
 > Place **after** the step that generates playwright e2e test report.    
 
-```yml
+```
 	- name: Convert E2E Report to Coverage Report
-		run : |
+			run : |
 			npm install playwright-e2e-report
 			node ./tests/reportConvertor.js
 ```
