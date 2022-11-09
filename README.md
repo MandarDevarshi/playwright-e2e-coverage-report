@@ -2,7 +2,7 @@
 
 > **Caution** - not extensively tested. Share report files to help improve the solution.
 
-<a href="https://www.buymeacoffee.com/mandardev" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://www.buymeacoffee.com/mandardev" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" style="height: 30px !important;width: 108px !important;" ></a>
 
 ## Description
 
@@ -44,11 +44,12 @@ In your `CI` pipeline eg. github actions add a step after the one which generate
 
 > Place **after** the step that generates playwright e2e test report.
 
-```yaml
+```yml
 - name: Convert E2E Report to Coverage Report
-  run : |
-	npm install playwright-e2e-coverage-report
-	node ./tests/reportConvertor.js
+	run : |
+		npm install playwright-e2e-coverage-report
+		node ./tests/reportConvertor.js
+
 ```
 
 The playwright report named **_`e2eresults.json`_** is to be generated at project root by default when checked out in a CI. To make changes like report location and name they can be made in the script file `reportConverter.js` [See step 2](#step-2).
@@ -89,3 +90,6 @@ The playwright report named **_`e2eresults.json`_** is to be generated at projec
 ---
 
 <a href="https://www.buymeacoffee.com/mandardev" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
+## Useful Link
+- [Coverage JSON format](https://github.com/gotwarlost/istanbul/blob/master/coverage.json.md)
