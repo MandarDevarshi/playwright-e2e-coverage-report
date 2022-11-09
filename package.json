@@ -13,9 +13,6 @@
   ],
   "author": "Mandar Devarshi <mandardevarshi@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "edit-json-file": "^1.7.0"
-  },
   "type": "module",
   "repository": {
     "type": "git",
