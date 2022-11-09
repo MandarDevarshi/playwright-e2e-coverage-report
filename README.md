@@ -46,10 +46,9 @@ In your `CI` pipeline eg. github actions add a step after the one which generate
 
 ```yml
 - name: Convert E2E Report to Coverage Report
-	run : |
+  run : |
 		npm install playwright-e2e-coverage-report
 		node ./tests/reportConvertor.js
-
 ```
 
 The playwright report named **_`e2eresults.json`_** is to be generated at project root by default when checked out in a CI. To make changes like report location and name they can be made in the script file `reportConverter.js` [See step 2](#step-2).
