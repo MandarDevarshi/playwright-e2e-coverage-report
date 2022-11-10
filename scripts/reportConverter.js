@@ -4,7 +4,7 @@
 // 
 
 const fs = require('node:module')
-import { createE2ECoverageReport } from 'playwright-e2e-coverage-report'
+const createE2ECoverageReport = require('playwright-e2e-coverage-report')
 
 /**
  * Entry point script that is executed by node.
