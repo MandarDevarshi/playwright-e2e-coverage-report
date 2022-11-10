@@ -1,17 +1,16 @@
 #!/usr/bin/env node
 // Entry point script for playwright e2e test report conversion
-// to a coverage friendly format
+// to coverage friendly format
 // 
-// Downloaded by CI step
 
 import fs from 'fs'
 import { createE2ECoverageReport } from 'playwright-e2e-coverage-report'
 
 /**
- * Entry point script to start report conversion script
- * executes after playwright test report is generate
- * Currently, only supports json format
- * Consumes, playwright test report from app root 
+ * Entry point script that is executed by node.
+ * It executes after playwright test report is generated
+ * Currently, only JSON format is supported
+ * Consumes, playwright test report from project root (modifiable)
  *
  * @name reportConvertor
  * @function
@@ -23,15 +22,15 @@ function reportConvertor (){
 var data = {}
 try {
 	// read playwright test report from project root
-  // change location and name here to match with playwright config
+	// change location and name here to match with playwright config
 	data = JSON.parse(fs.readFileSync('./e2eresults.json', 'utf8'));
 } catch (err) {
-	console.log("error in reporting coversion", err)
+	console.log("*** Error in coverting to coverage format *** \n", err)
 } finally {
 	// calls playwright-e2e-report package
 	createE2ECoverageReport({ ...data })
 	console.log("=======================================")
-	console.log("==== Report Converted for Coverage ====")
+	console.log("-- E2E Report Converted for Coverage --")
 	console.log("=======================================")
 }
 return 0
