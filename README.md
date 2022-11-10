@@ -44,8 +44,9 @@ In your `CI` pipeline eg. github actions add a step after the one which generate
 - name: Convert E2E Report to Coverage Report
   run : |
     npm install playwright-e2e-coverage-report
-    wget https://github.com/MandarDevarshi/playwright-e2e-coverage-report/blob/48ac42f9a35ee1e9575c1cf44724bfd271a58328/scripts/reportConverter.js		
-    node ./reportConvertor.js
+    wget https://raw.githubusercontent.com/MandarDevarshi/playwright-e2e-coverage-report/master/scripts/reportConverter.js	
+    chmod u+x reportConverter.js
+    node ./reportConverter.js
 ```
 
 The playwright report named **_`e2eresults.json`_** is to be generated or made available at project root by default, i.e when checked out in a CI. To make changes to report location and name set it in the script file `reportConverter.js` by saving it in your repository and removing the `fetching` of the script in the `CI` job.
@@ -85,10 +86,10 @@ The playwright report named **_`e2eresults.json`_** is to be generated or made a
 
 --- -->
 
-<a href="https://www.buymeacoffee.com/mandardev" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-
 ## Useful links
 
 - [Coverage JSON format](https://github.com/gotwarlost/istanbul/blob/master/coverage.json.md)
 - [Istanbul Alternate Reporters](https://istanbul.js.org/docs/advanced/alternative-reporters/)
 - [Playwright JSON Reporter](https://playwright.dev/docs/test-reporters#json-reporter)
+
+<a href="https://www.buymeacoffee.com/mandardev" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
