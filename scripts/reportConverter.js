@@ -3,7 +3,7 @@
 // to coverage friendly format
 // 
 
-import fs from 'fs'
+import fs from 'node:fs'
 import { createE2ECoverageReport } from 'playwright-e2e-coverage-report'
 
 /**
