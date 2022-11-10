@@ -3,7 +3,7 @@
 // to coverage friendly format
 // 
 
-import fs from 'node:module'
+const fs = require('node:module')
 import { createE2ECoverageReport } from 'playwright-e2e-coverage-report'
 
 /**
